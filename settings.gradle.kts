@@ -2,8 +2,9 @@ rootProject.name = "Listy"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
-
+    includeBuild("plugins")
     repositories {
+//        maven("https://maven.myket.ir")
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
@@ -19,6 +20,7 @@ pluginManagement {
 dependencyResolutionManagement {
     repositories {
         google {
+//            maven("https://maven.myket.ir")
             mavenContent {
                 includeGroupAndSubgroups("androidx")
                 includeGroupAndSubgroups("com.android")
@@ -34,3 +36,4 @@ plugins {
 }
 
 include(":composeApp")
+include(":app:androidApp")

@@ -55,7 +55,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.jetbrains.compose.navigation)
+            implementation(libs.compose.navigation)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.jetbrains.icons.core)
@@ -65,7 +65,7 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
-            implementation(libs.jetbrains.compose.navigation)
+//            implementation(libs.jetbrains.compose.navigation)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.androidx.room.runtime)
             implementation(libs.sqlite.bundled)
@@ -85,9 +85,9 @@ kotlin {
             kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
         }
 
-        dependencies {
-            ksp(libs.androidx.room.compiler)
-        }
+//        dependencies {
+//            ksp(libs.androidx.room.compiler)
+//        }
     }
 }
 
@@ -139,6 +139,6 @@ compose.desktop {
     }
 }
 
-ksp {
-    arg("KOIN_USE_COMPOSE_VIEWMODEL","true")
-}
+//ksp {
+//    arg("KOIN_USE_COMPOSE_VIEWMODEL","true")
+//}
