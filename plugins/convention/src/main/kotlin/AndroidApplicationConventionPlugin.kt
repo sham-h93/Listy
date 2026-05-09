@@ -10,15 +10,16 @@ import org.hotaku.listy.libs
 
 class AndroidApplicationConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
-        apply(libs.getPluginId("kotlinAndroid"))
-        apply(libs.getPluginId("androidApplication"))
+        with(pluginManager) {
+            apply(libs.getPluginId("kotlinAndroid"))
+            apply(libs.getPluginId("androidApplication"))
+        }
 
         configureKotlinAndroid()
 
         dependencies {
+            implementation(libs.getLibrary("androidx.core.ktx"))
             implementation(libs.getLibrary("androidx.activity.compose"))
-            implementation(libs.getLibrary("koin.android"))
-            implementation(libs.getLibrary("koin.compose.androidx"))
         }
     }
 }

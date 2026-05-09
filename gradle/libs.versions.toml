@@ -87,5 +87,5 @@ room = { id = "androidx.room", version.ref = "room" }
 composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload"}
 
 # Project plugins
-listy-android-application = { id = "listy.aandroid.application", version = "unspecified"}
+listy-androidApp = { id = "listy.android.application", version = "unspecified"}
 

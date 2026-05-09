@@ -31,8 +31,8 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("aandroidApp") {
-            id = "listy.aandroid.application"
+        register("aandroidAppPlugin") {
+            id = "listy.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
     }
